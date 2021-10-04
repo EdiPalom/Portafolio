@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+body{
+    background-image: linear-gradient(to top, #3b91ff, #388ffe, #368dfd, #338afc, #3088fb, #2d80f0, #2979e5, #2571da, #1e62c2, #1754ab, #0e4695, #04397f);
+    overflow:hidden;
+}
+
+p{
+    color:#4f4f4f;
+    font-size:30px;
+}
+
+span{
+    font-size: 150px;
+    font-family: 'Ephesis', cursive;
+}
+
+.arrow{
+    margin-left:15rem;
+    margin-top:28rem;
+}
+
+.title{
+    font-size: 100px;
+    color:#f1ecec;
+}
+
+.full{
+    height:45rem;
+    display:flex;
+    align-items: center;
+}
+
+.subtitle{
+    font-family: 'Ephesis', cursive;
+    font-size:80px;
+}
+
+.bg_color
+{
+    background-image: linear-gradient(to bottom, #416f4c, #467752, #4c7f59, #51885f, #579066);
+    margin-top:5px;
+    border-radius:5px;
+}
+
+.bg_color a{
+    text-decoration:none;
+}
+
+.bg_color:hover{
+    background-image: linear-gradient(to bottom, #2f4858, #2a4f60, #225668, #165e6e, #006573);
+}
+
+.mnt{
+    background:no-repeat url("../img/mountain.png");
+    background-size:cover;
+    height:100%;
+}
+
+.play{
+    position: relative;
+    transform:rotateZ(270deg);
+    margin: 1rem;
+}
+
+.play_control{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+}
+
+.play_control p{
+    margin-left:2rem;
+    position:absolute;
+    top:2.8rem;
+    font-size:25px;
+}
+
+#btn_play p:hover
+{
+    font-weight:bolder;
+}
+
+
