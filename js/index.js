@@ -1,3 +1,6 @@
+
+
+
 var sound = new Howl({
     src: ['media/BlindShift.ogg'],
     html5:true
@@ -8,6 +11,29 @@ var gui_sound = new Howl({
 });
 
 let objs = document.getElementsByClassName("bg_color");
+let btn_play = document.getElementById("btn_play");
+let video = document.getElementById("space_video");
+
+(()=>{
+
+    if(window.navigator.userAgent.toLowerCase().indexOf("chrome") > 0)
+    {
+        btn_play.innerHTML = '';
+        space_video.controls = true;
+    }
+    
+    btn_play.addEventListener("mouseover",()=>{
+        btn_play.style.cursor="pointer";
+    });
+
+    btn_play.addEventListener("click",()=>{
+        play_video();
+    });
+
+    space_video.addEventListener("pause",()=>{
+        sound.pause();
+    });
+})();
 
 function get_chunk(){
     return Math.floor(Math.random() * 255);
@@ -23,13 +49,11 @@ for(let i = 0; i < objs.length; i++)
     });
 }
 
-let video = document.getElementById("space_video");
-
 function play_video()
 {
     video.style.cursor = 'none';
     video.play();
-    document.getElementById("btn_play").style.visibility = "collapse";
+    btn_play.style.visibility = "collapse";
 }
 
 function pause_play()
@@ -41,7 +65,7 @@ function pause_play()
 function show_play()
 {
     video.style.cursor = 'auto';
-    document.getElementById("btn_play").style.visibility = "visible";
+    btn_play.style.visibility = "visible";
     sound.stop();
 }
 
